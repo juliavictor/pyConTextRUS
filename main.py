@@ -2,7 +2,7 @@ import pyConTextNLP.pyConTextGraph as pyConText
 import pyConTextNLP.itemData as itemData
 import networkx as nx
 import pyConTextNLP.helpers as helpers
-
+from os import path
 
 reports = [
     """IMPRESSION: Evaluation limited by lack of IV contrast; however, no evidence of
@@ -21,12 +21,15 @@ reports = [
     """IMPRESSION: No definite pneumothorax""",
     """IMPRESSION:  New opacity at the left lower lobe consistent with pneumonia."""
 ]
+# относительный адрес!
+script_dir = path.dirname(__file__)
+print(script_dir)
 
 modifiers = itemData.instantiateFromCSVtoitemData(
-    "file:///C:/Users/Yulia/YandexDisk/Представление знаний в информационных системах/pyConTextNLP/lexical_rus.tsv")
+    "file:///"+script_dir+"/lexical_rus.tsv")
 
 targets = itemData.instantiateFromCSVtoitemData(
-    "file:///C:/Users/Yulia/YandexDisk/Представление знаний в информационных системах/pyConTextNLP/utah_rus.tsv")
+    "file:///"+script_dir+"/utah_rus.tsv")
 
 # Example function to analyze each sentence
 def markup_sentence(s, modifiers, targets, prune_inactive=True):
