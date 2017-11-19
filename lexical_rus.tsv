@@ -1,38 +1,38 @@
 Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
-исключены	DEFINITE_NEGATED_EXISTENCE	исключ[а-я]*	bidirectional				
-исключить	INDICATION	быть исключ[а-я]*|исключить	bidirectional				
-исключается	INDICATION	исключается	bidirectional				
-можно исключить	DEFINITE_NEGATED_EXISTENCE	можно исключить|позвол[а-я]* исключ[а-я]*	bidirectional				
-нельзя исключать	AMBIVALENT_EXISTENCE	(нельзя|не може[а-я]+) исключ(и|а)ть|исключ(и|а)ть (нельзя|не може[а-я]+)|не может быть исключ[а-я]*	bidirectional				
-не может быть полностью исключен	PROBABLE_NEGATED_EXISTENCE	(не может быть|нельзя) полностью исключ[а-я]*|полностью исключ[а-я]* нельзя	bidirectional				
-может быть исключен	DEFINITE_NEGATED_EXISTENCE	(может|могут) быть исключ[а-я]*	bidirectional				
+исключены	DEFINITE_NEGATED_EXISTENCE	\bисключ[а-я]*	bidirectional				
+исключить	INDICATION	\b(быть исключ[а-я]*|исключить)	bidirectional				
+исключается	INDICATION	\bисключается	bidirectional				
+можно исключить	DEFINITE_NEGATED_EXISTENCE	\b(можно исключить|позвол[а-я]* исключ[а-я]*)	bidirectional				
+нельзя исключать	AMBIVALENT_EXISTENCE	\b((нельзя|не може[а-я]+) исключ(и|а)ть|исключ(и|а)ть (нельзя|не може[а-я]+)|не может быть исключ[а-я]*)	bidirectional				
+не может быть полностью исключен	PROBABLE_NEGATED_EXISTENCE	\b((не может быть|нельзя) полностью исключ[а-я]*|полностью исключ[а-я]* нельзя)	bidirectional				
+может быть исключен	DEFINITE_NEGATED_EXISTENCE	\b(может|могут) быть исключ[а-я]*	bidirectional				
 осмотр	INDICATION	\b(осмотр[а-я]*|обследовани[а-я]*|освидетельствован[а-я]*)\b	bidirectional				
-свободен	DEFINITE_NEGATED_EXISTENCE	свобод[а-я]*	bidirectional				
-был исключен	DEFINITE_NEGATED_EXISTENCE	был исключ[а-я]*	bidirectional				
-были исключены	DEFINITE_NEGATED_EXISTENCE	были исключ[а-я]*	bidirectional				
-в дифференциальном	AMBIVALENT_EXISTENCE	в\sдифференциальн[а-я]*	bidirectional				
-отрицателен	DEFINITE_NEGATED_EXISTENCE	отрицател[а-я]*	bidirectional				
-не исключается	AMBIVALENT_EXISTENCE	не исключ[а-я]*	bidirectional				
-полностью не исключается	PROBABLE_NEGATED_EXISTENCE	полностью не исключ[а-я]*|не исключ[а-я]* полностью	bidirectional	2/28/2013	added definitely	removed ed	
-присутствует	DEFINITE_EXISTENCE	присутств[а-я]*	bidirectional	4/29/2013			
-быть исключен	INDICATION	быть исключ(е|ё)н[а-я]?	bidirectional				
-следует исключить	DEFINITE_NEGATED_EXISTENCE	следует исключ[а-я]*	bidirectional				
-не был исключен	INDICATION	не был исключ[а-я]*	bidirectional				
-должен быть исключен	INDICATION	долж[а-я]* быть исключ[а-я]*	bidirectional				
-необходимо исключить	INDICATION	необходимо исключ[а-я]*	bidirectional				
-будет исключен	INDICATION	будет исключ[а-я]*	bidirectional				
-не может быть исключен полностью	PROBABLE_NEGATED_EXISTENCE	(не может быть|нельзя) исключ[а-я]* полностью	bidirectional	2/28/2013			
-не виден определенно	PROBABLE_NEGATED_EXISTENCE	не( )?вид[а-я]* (определенн|ясн|четк|точн)[а-я]*	bidirectional	3/22/2013			
-сейчас измеряя	HISTORICAL	(сейчас|в настоящее время|сегодня)? (измер|оцен|определ)[а-я]*	bidirectional				
-прогрессировал	HISTORICAL	(прогресс|увелич|(воз)?р(о|а)с)[а-я]*	bidirectional	3/22/2013			
-протокол	INDICATION	(за)?протокол[а-я]*	bidirectional				
-разрешен	HISTORICAL	(раз)?реш[а-я]*	bidirectional				
-подозрение	PROBABLE_EXISTENCE	подозре[а-я]*|предполага[а-я]*	bidirectional	4/29/2013			
-маловероятно	PROBABLE_NEGATED_EXISTENCE	(мало( )?вероят|сомнител)[а-я]*|вряд ли|едва ли	bidirectional				
+свободен	DEFINITE_NEGATED_EXISTENCE	\bсвобод[а-я]*	bidirectional				
+был исключен	DEFINITE_NEGATED_EXISTENCE	\bбыл исключ[а-я]*	bidirectional				
+были исключены	DEFINITE_NEGATED_EXISTENCE	\bбыли исключ[а-я]*	bidirectional				
+в дифференциальном	AMBIVALENT_EXISTENCE	\bв\sдифференциальн[а-я]*	bidirectional				
+отрицателен	DEFINITE_NEGATED_EXISTENCE	\bотрицател[а-я]*	bidirectional				
+не исключается	AMBIVALENT_EXISTENCE	\bне исключ[а-я]*	bidirectional				
+полностью не исключается	PROBABLE_NEGATED_EXISTENCE	\b(полностью не исключ[а-я]*|не исключ[а-я]* полностью)	bidirectional	2/28/2013	added definitely	removed ed	
+присутствует	DEFINITE_EXISTENCE	\bприсутств[а-я]*	bidirectional	4/29/2013			
+быть исключен	INDICATION	\bбыть исключ(е|ё)н[а-я]?	bidirectional				
+следует исключить	DEFINITE_NEGATED_EXISTENCE	\bследует исключ[а-я]*	bidirectional				
+не был исключен	INDICATION	\bне был исключ[а-я]*	bidirectional				
+должен быть исключен	INDICATION	\bдолж[а-я]* быть исключ[а-я]*	bidirectional				
+необходимо исключить	INDICATION	\bнеобходимо исключ[а-я]*	bidirectional				
+будет исключен	INDICATION	\bбудет исключ[а-я]*	bidirectional				
+не может быть исключен полностью	PROBABLE_NEGATED_EXISTENCE	\b(не может быть|нельзя) исключ[а-я]* полностью	bidirectional	2/28/2013			
+не виден определенно	PROBABLE_NEGATED_EXISTENCE	\bне( )?вид[а-я]* (определенн|ясн|четк|точн)[а-я]*	bidirectional	3/22/2013			
+сейчас измеряя	HISTORICAL	\b(сейчас|в настоящее время|сегодня)? (измер|оцен|определ)[а-я]*	bidirectional				
+прогрессировал	HISTORICAL	\b(прогресс|увелич|(воз)?р(о|а)с)[а-я]*	bidirectional	3/22/2013			
+протокол	INDICATION	\b(за)?протокол[а-я]*	bidirectional				
+разрешен	HISTORICAL	\b(раз)?реш[а-я]*	bidirectional				
+подозрение	PROBABLE_EXISTENCE	\b(подозре[а-я]*|предполага[а-я]*)	bidirectional	4/29/2013			
+маловероятно	PROBABLE_NEGATED_EXISTENCE	\b((мало( )?вероят|сомнител)[а-я]*|вряд ли|едва ли)	bidirectional				
 varying ages	HISTORICAL		bidirectional				
 would not be expected	PROBABLE_NEGATED_EXISTENCE		bidirectional	2/28/2013			
 acute	ACUTE		bidirectional				
-повторение	HISTORICAL	снова|опять|вновь|ещ(е|ё) раз|повтор[а-я]*	bidirectional				
+повторение	HISTORICAL	\b(снова|опять|вновь|ещ(е|ё) раз|повтор[а-я]*)	bidirectional				
 age indeterminate	HISTORICAL		bidirectional				
 appear	PROBABLE_EXISTENCE	(\bappear\b|\bappears\b)	bidirectional				
 cannot be evaluated	AMBIVALENT_EXISTENCE		bidirectional	2/28/2013			
