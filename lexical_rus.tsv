@@ -37,36 +37,35 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 появляется	PROBABLE_EXISTENCE	\bп(р)?ояв[а-я]+|\bвозник[а-я]*	bidirectional				
 не может быть оценен	AMBIVALENT_EXISTENCE	\b(не может быть (установлен|оцен(е|ё)н)|(установить|оценить) (невозможно|нельзя))	bidirectional	2/28/2013			
 хронический	HISTORICAL	\bхронич[а-я]*\b	bidirectional	2/28/2013	chronicity: make regular expression to capture variations		
-diminished	HISTORICAL		bidirectional				
-equivocal	PROBABLE_EXISTENCE		bidirectional				
-evaluation	INDICATION		bidirectional				
-evolving	HISTORICAL		bidirectional				
-healing	HISTORICAL	\b(healing|healed)\b	bidirectional				
-improved	HISTORICAL	improved|improving|improvement	bidirectional			4/2013	
-incompletely evaluated	AMBIVALENT_EXISTENCE		bidirectional	4/29/2013			
-interval change	HISTORICAL		bidirectional				
-interval increase	HISTORICAL	(interval)\b[\d\D\s]*increase	bidirectional	4/29/2013			
-less likely	AMBIVALENT_EXISTENCE		bidirectional	4/29/2013			
-likely	PROBABLE_EXISTENCE		bidirectional				
-likely chronic	HISTORICAL		bidirectional	2/28/2013	thought of just changing chronic to bidirectional	 but also capture likely	
-new	ACUTE		bidirectional				
-new from prior exam	ACUTE	new from(\sthe)? prior (exam|study)	bidirectional				
-no change in	HISTORICAL	(no(t)? ([a-zA-z] )?change(d)?( in)?)	bidirectional	2/28/2013		4/15/2013	
-no longer noted	DEFINITE_NEGATED_EXISTENCE	no longer (seen|noted|visualized)	bidirectional				
-not	DEFINITE_NEGATED_EXISTENCE	\bnot\b	bidirectional	3/23/2013			
-not significantly changed	HISTORICAL		bidirectional				
-old	HISTORICAL		bidirectional				
-on previous exam	HISTORICAL	(on |from )?(previous|prior) exam	bidirectional	need regular expression			
-persistent	HISTORICAL		bidirectional				
-possible	PROBABLE_EXISTENCE		bidirectional	2/28/2013			
-previous	HISTORICAL		bidirectional	3/21/2013	changed to bidirectional		
-previously described	HISTORICAL	previously (described|suspected)	bidirectional	3/21/2013		3/22/2013	
-prior	HISTORICAL		bidirectional				
-prior study	HISTORICAL		bidirectional				
-probable	PROBABLE_EXISTENCE		bidirectional	3/21/2013			
-questionable	PROBABLE_NEGATED_EXISTENCE		bidirectional	4/29/2013			
-should be considered	PROBABLE_EXISTENCE		bidirectional				
-stable	HISTORICAL		bidirectional				
+уменьшился	HISTORICAL	\b(уменьш|сократ|(с|по)низ|ослаб|сузил)[а-я]*	bidirectional				
+неопределен	PROBABLE_EXISTENCE	\b(неопредел(е|ё)н|выраж[а-я]+ неч(е|ё)тко|неч(е|ё)тко выраж|неоднознач)[а-я]*	bidirectional				
+оценка	INDICATION	\b(оценк|оцениван|анализ|проверк|обследован|экспертиз|тест|осмотр|исследован)[а-я]*	bidirectional				
+развивающийся	HISTORICAL	\b(развива|(из)?меня|прогрессир)[а-я]+	bidirectional				
+лечение	HISTORICAL	\b((из|вы)?леч(ен|и)|зажи(в)?л|выздоравл)[а-я]*	bidirectional				
+улучшение	HISTORICAL	\b(улучш(ен|и)|нормализова)[а-я]*	bidirectional			4/2013	
+неполная проверка	AMBIVALENT_EXISTENCE	\b((не( )?полн|не до конца|частичн)[а-я]* (оцен|провер|обследован|[а-я]*анализ)[а-я]*|(оцен|провер|обследован|[а-я]*анализ)[а-я]*[\d\D\s]*(не( )?полн|не до конца|частичн)[а-я]*)	bidirectional	4/29/2013			
+изменения интервалов	HISTORICAL	\bизменени(е|я) (в )?(интервал|промежутк|пауз|перерыв|период|отрезк|продолжительност)[а-я]*	bidirectional				
+увеличение интервалов	HISTORICAL	\b(увелич|рост|возраст)[а-я]* [\d\D\s]*(интервал|промежутк|пауз|перерыв|период|отрезк|продолжительност)[а-я]*	bidirectional	4/29/2013			
+менее вероятно	AMBIVALENT_EXISTENCE	\b(меньше шансов|мен[а-я]+ вероят[а-я]+|реже|вряд ли)	bidirectional	4/29/2013		
+вероятно	PROBABLE_EXISTENCE	\b(вероят[а-я]+|возмож[а-я]+|скорее всего)	bidirectional				
+вероятно хронический	HISTORICAL	\b(вероят[а-я]+( всего)?|возмож[а-я]+|скорее всего) хроническ[а-я]+	bidirectional	2/28/2013	thought of just changing chronic to bidirectional	 but also capture likely	
+новый	ACUTE	\bнов[а-я]+	bidirectional				
+новый с предыдущего осмотра	ACUTE	\bнов[а-я]+[\d\D\s]*с (предыдущ|прошл|прошедш|последн)[а-я]+ (оценк|оцениван|тест|анализ|проверк|обследован|экспертиз|осмотр)[а-я]*	bidirectional				
+без изменений в	HISTORICAL	\b((без|никаких|нет)[\d\D\s]*изменений( в)?|изменени(я|й)[\d\D\s]*(отсутствуют|никаких|нет))	bidirectional	2/28/2013		4/15/2013	
+больше не видны	DEFINITE_NEGATED_EXISTENCE	\b(больше|более) не (вид|замет|визуализир)[а-я]+	bidirectional				
+нет	DEFINITE_NEGATED_EXISTENCE	\b(нет|не)\b	bidirectional	3/23/2013			
+без существенных изменений	HISTORICAL	\b((существенно|значительно|заметно|серь(е|ё)зно) не измени[а-я]+|(существенных|значительных|заметных|серь(е|ё)зных) (изменений|перемен) нет|без (существенных|значительных|заметных|серь(е|ё)зных) (изменений|перемен))	bidirectional				
+старый	HISTORICAL	\b(стар|прежн|бывш)[а-я]*	bidirectional				
+на прошлом осмотре	HISTORICAL	\b(на|с) (прошл|последн|предыдущ|предшеств)[а-я]+ (осмотр|обследован)[а-я]*	bidirectional	need regular expression			
+постоянный	HISTORICAL	\b(постоян|стойк|устойчив|непрерывн|сохраняющ|неизменяем|стабильн)[а-я]+	bidirectional				
+возможный	PROBABLE_EXISTENCE	\b(возможн|вероятн|потенциальн)[а-я]+	bidirectional	2/28/2013			
+прошлый	HISTORICAL	\b(прошл|последн|предыдущ|предшеств|предварительн)[а-я]+	bidirectional	3/21/2013	changed to bidirectional		
+ранее описанный	HISTORICAL	\b(ранее|раньше|уже|предварительно|выше)( )?(описан|подозрев|указан|изложен)[а-я]*( выше)?	bidirectional	3/21/2013		3/22/2013	
+предварительный	HISTORICAL	\bпредварительн[а-я]+	bidirectional				
+прошлый осмотр	HISTORICAL	\b(прошл|последн|предыдущ|предшеств|предварительн)[а-я]+ (оценк|оцениван|анализ|проверк|обследован|экспертиз|тест|осмотр|исследован)[а-я]*	bidirectional				
+вероятный	PROBABLE_EXISTENCE	\b(возможн|вероятн|предполагаем)[а-я]+	bidirectional	3/21/2013			
+сомнителен	PROBABLE_NEGATED_EXISTENCE	\b(под вопросом|под сомнением|сомнител|вызыва[а-я]+ сомнени(е|я)|спор(н|ен)[а-я]*)	bidirectional	4/29/2013			
+следует изучить	PROBABLE_EXISTENCE	\b(должен быть рассмотрен|(следует|нужно) (рассмотреть|изучить|принять во внимание|обдумать))	bidirectional				
 still evident	HISTORICAL		bidirectional	4/29/2013			
 subacute	HISTORICAL		bidirectional				
 suggest	PROBABLE_EXISTENCE	\bsuggest[a-z]+\b	bidirectional				
