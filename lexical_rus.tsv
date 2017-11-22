@@ -46,7 +46,7 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 неполная проверка	AMBIVALENT_EXISTENCE	\b((не( )?полн|не до конца|частичн)[а-я]* (оцен|провер|обследован|[а-я]*анализ)[а-я]*|(оцен|провер|обследован|[а-я]*анализ)[а-я]*[\d\D\s]*(не( )?полн|не до конца|частичн)[а-я]*)	bidirectional	4/29/2013			
 изменения интервалов	HISTORICAL	\bизменени(е|я) (в )?(интервал|промежутк|пауз|перерыв|период|отрезк|продолжительност)[а-я]*	bidirectional				
 увеличение интервалов	HISTORICAL	\b(увелич|рост|возраст)[а-я]* [\d\D\s]*(интервал|промежутк|пауз|перерыв|период|отрезк|продолжительност)[а-я]*	bidirectional	4/29/2013			
-менее вероятно	AMBIVALENT_EXISTENCE	\b(меньше шансов|мен[а-я]+ вероят[а-я]+|реже|вряд ли)	bidirectional	4/29/2013		
+менее вероятно	AMBIVALENT_EXISTENCE	\b(меньше шансов|мен[а-я]+ вероят[а-я]+|реже|вряд ли)	bidirectional	4/29/2013			
 вероятно	PROBABLE_EXISTENCE	\b(вероят[а-я]+|возмож[а-я]+|скорее всего)	bidirectional				
 вероятно хронический	HISTORICAL	\b(вероят[а-я]+( всего)?|возмож[а-я]+|скорее всего) хроническ[а-я]+	bidirectional	2/28/2013	thought of just changing chronic to bidirectional	 but also capture likely	
 новый	ACUTE	\bнов[а-я]+	bidirectional				
