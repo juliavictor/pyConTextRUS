@@ -68,12 +68,12 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 следует изучить	PROBABLE_EXISTENCE	\b(должен быть рассмотрен|(следует|нужно) (рассмотреть|изучить|принять во внимание|обдумать))	bidirectional				
 еще заметен	HISTORICAL	\b((вс(е|ё))? ещ(е|ё)|до сих пор|по-прежнему) (очевид(е|н)|замет(е|н)|проявля|наблюда|прослежива|присутств|вид(е|н))[а-я]*	bidirectional	4/29/2013			
 подострый	HISTORICAL	\bподостр[а-я]*	bidirectional				
-предполагает	PROBABLE_EXISTENCE	\b(предполо(г|ж)|говор|означ|свидетельств|указыв|показыв|позвол[а-я]+ предположить|да[а-я]+ основани(я|е) полагать)[а-я]*	bidirectional				
+предполагает	PROBABLE_EXISTENCE	\b(предполо(г|ж)|говор|означ|свидетельству|указыв|показыв|позвол[а-я]+ предположить|да[а-я]+ основани(я|е) полагать)[а-я]*	bidirectional				
 неизменившийся	HISTORICAL	\b(неизменивш|неизмен|без изменений|оставш[а-я]* прежним)[а-я]*	bidirectional				
 против	AMBIVALENT_EXISTENCE	\b(против|в сравнении с|по сравнению с|противопоставл[а-я]*|в отличие от)	bidirectional				
 отсутствие	DEFINITE_NEGATED_EXISTENCE	\bотсутств[а-я]+	bidirectional				
 достаточно, чтобы исключить у пациента	DEFINITE_NEGATED_EXISTENCE	\bдостаточно(,)? чтобы исключить у пациента	bidirectional				
-проверка на	INDICATION	\b(оценк|оцениван|анализ|проверк|обследован|экспертиз|тест|осмотр|исследован)[а-я]* (для|на)	bidirectional				
+проверка на	INDICATION	\b(оценк|оцениван|анализ|определени|проверк|обследован|экспертиз|тест|осмотр|исследован|освидетельствован)[а-я]* (для|на( предмет)?)	bidirectional				
 под угрозой	FUTURE	\b(под угрозой|риск[а-я]*|опасност[а-я]+ возникновения)	bidirectional	4/29/2013			
 нетипично для	PROBABLE_NEGATED_EXISTENCE	\b((не|а)типич|нехарактер|необыч|нестандарт)[а-я]+ для	bidirectional	4/29/2013			
 можно исключить у пациента	DEFINITE_NEGATED_EXISTENCE	\b(можно исключить у пациент(а|ки)|у пациент(а|ки) можно исключить)	bidirectional				
@@ -93,35 +93,31 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 отклонен	DEFINITE_NEGATED_EXISTENCE	\b(отклонен|снят)[а-я]*	bidirectional				
 снижается	PROBABLE_NEGATED_EXISTENCE	\b(снижа|сокраща|(с)?пада|уменьша|убыва|ухудша)[а-я]+	bidirectional				
 снижение	HISTORICAL	\b(снижени|сокращени|падени|уменьшени|спад)[а-я]* в	bidirectional		make regular expression to capture variations		
-definite	DEFINITE_EXISTENCE		bidirectional				
-denied	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-denies	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-deny	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-denying	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-did rule (the patient|him|her) out	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-did rule out	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-differential diagnosis would include	AMBIVALENT_EXISTENCE	differential\s((diagnosis|considerations)\s)?((would|could)\sinclud[a-z]*)?	bidirectional				
-documented	HISTORICAL		bidirectional				
-evaluate for	INDICATION		bidirectional				
-evaluation of	INDICATION	evaluation\s(of|for)	bidirectional				
-evidence	DEFINITE_EXISTENCE		bidirectional				
-did rule her out against	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-examination for	INDICATION	(study|exam|examination) for	bidirectional				
-fails to reveal	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-free of	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-gram negative	PSEUDONEG		bidirectional				
-higher sensitivity for	INDICATION		bidirectional	2/28/2013			
-highly suggestive	DEFINITE_EXISTENCE		bidirectional	4/29/2013			
-history of	HISTORICAL		bidirectional				
-if there are	FUTURE		bidirectional	2/28/2013			
-if there is concern for	FUTURE		bidirectional				
-is to be ruled out for	INDICATION		bidirectional				
-is more sensitive	INDICATION	is more sensitive	bidirectional				
-known	HISTORICAL	\bknown\b	bidirectional				
-low probability	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-may be related	PROBABLE_EXISTENCE		bidirectional	2/28/2013			
-may represent	PROBABLE_EXISTENCE	(may|might)\s(represent|reflect)	bidirectional				
-might be ruled out for	PROBABLE_NEGATED_EXISTENCE		bidirectional				
+определенный	DEFINITE_EXISTENCE	\b(определ(е|ё)ны|точ(е)?н|несомнен(е)?н|яс(е)?н|яв(е)?н|очевид(е)?н)[а-я]*	bidirectional				
+отрицал	DEFINITE_NEGATED_EXISTENCE	\b(отрицал|отвергал|опровергал|отклон(и|я)л)[а-я]*	bidirectional				
+отрицает	DEFINITE_NEGATED_EXISTENCE	\b(отрицает|отвергает|опровергает|отклоняет)	bidirectional				
+отрицать	DEFINITE_NEGATED_EXISTENCE	\b(отриц|отверг|опроверг|отклон)[а-я]*	bidirectional				
+отрицающий	DEFINITE_NEGATED_EXISTENCE	\b(отрицающ|отвергающ|опровергающ|отрицани)[а-я]*	bidirectional				
+исключили у пациента	DEFINITE_NEGATED_EXISTENCE	\bисключ[а-я]* у (пациент(а|ки)|него|не(е|ё))	bidirectional				
+дифференциальный диагноз будет включать	AMBIVALENT_EXISTENCE	\bдифференциальн[а-я]+ (диагноз|диагностика) (будет|может) включать	bidirectional				
+документированный	HISTORICAL	\b((за)?документирован|зарегистирован|документально подтвержден)[а-я]*	bidirectional				
+проверить	INDICATION	\b(провер(и|я)|определ(и|я)|рассмотр(е|я)|оцен(и|я)|пров(е|о)[а-я]+ оценку|проанализир(о|у))[а-я]*( на( предмет)?)?	bidirectional				
+доказательство	DEFINITE_EXISTENCE	\b(доказательств|свидетельств|подтверждени)[а-я]*	bidirectional				
+признак	PROBABLE_EXISTENCE	\b(признак|симптом|выраженность|проявлени)[а-я]*	bidirectional				
+у нее исключили	DEFINITE_NEGATED_EXISTENCE	\bу нее исключ[а-я]*	bidirectional				
+не выявляется	DEFINITE_NEGATED_EXISTENCE	\bне выявл(я|е)[а-я]*	bidirectional				
+отсутствует	DEFINITE_NEGATED_EXISTENCE	\b(без| отсутств|свобод|не содерж)[а-я]*	bidirectional				
+грамотрицательная	PSEUDONEG	\b(по Граму отрицательн|грам(-)?отрицательн)[а-я]*	bidirectional				
+повышенная чувствительность	INDICATION	\b(более )?(высок|повышен)[а-я]* (чувствительность|восприимчивость)[а-я]*( (к|на))?	bidirectional	2/28/2013			
+свидетельствует	PROBABLE_EXISTENCE	\b((наиболее |весьма )?вероятно )?(свидетельств[а-я]* о|говор[а-я]* о|заставл[а-я]* предположить|указыв[а-я]* на)	bidirectional	4/29/2013			
+история	HISTORICAL	\b(истори|опыт|запис|анамнез)[а-я]*	bidirectional				
+если есть	FUTURE	\b(если (есть|име(е|ю)тся|существ|присутств)[а-я]*|при наличии)	bidirectional	2/28/2013			
+если есть подозрение на	FUTURE	\b(если (есть|име(е|ю)тся|существ|присутств)[а-я]*|при наличии) подозрени[а-я]* на	bidirectional				
+более чувствительный	INDICATION	\bболее (чувствител(ь|е)н|восприимчив)[а-я]*	bidirectional				
+известен	HISTORICAL	\bизвест(е)?н[а-я]*	bidirectional				
+низкая вероятность	PROBABLE_NEGATED_EXISTENCE	\b(низк|невысок|мал)[а-я]* вероятност[а-я]*	bidirectional				
+может относиться	PROBABLE_EXISTENCE	\bмо(г|ж)[а-я]* (относиться|быть связан[а-я]* с|иметь отношение|касаться|быть вызван[а-я]*)	bidirectional	2/28/2013			
+может представлять	PROBABLE_EXISTENCE	\bмо(г|ж)[а-я]* (представлять|свидетельствовать|означать|отражать|отображать|объясняться)	bidirectional				
 mimicking	PROBABLE_NEGATED_EXISTENCE		bidirectional	3/22/2013			
 must be ruled out for	DEFINITE_NEGATED_EXISTENCE		bidirectional				
 negative examination for	DEFINITE_NEGATED_EXISTENCE	negative (examination|study|exam|evaluation) for	bidirectional				
