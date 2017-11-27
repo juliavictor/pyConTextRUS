@@ -118,41 +118,38 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 низкая вероятность	PROBABLE_NEGATED_EXISTENCE	\b(низк|невысок|мал)[а-я]* вероятност[а-я]*	bidirectional				
 может относиться	PROBABLE_EXISTENCE	\bмо(г|ж)[а-я]* (относиться|быть связан[а-я]* с|иметь отношение|касаться|быть вызван[а-я]*)	bidirectional	2/28/2013			
 может представлять	PROBABLE_EXISTENCE	\bмо(г|ж)[а-я]* (представлять|свидетельствовать|означать|отражать|отображать|объясняться)	bidirectional				
-mimicking	PROBABLE_NEGATED_EXISTENCE		bidirectional	3/22/2013			
-must be ruled out for	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-negative examination for	DEFINITE_NEGATED_EXISTENCE	negative (examination|study|exam|evaluation) for	bidirectional				
-negative for	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-never developed	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-never had	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-no	DEFINITE_NEGATED_EXISTENCE	\bno\b	bidirectional				
-no abnormal	DEFINITE_NEGATED_EXISTENCE		bidirectional	2/28/2013	changed from probable to definite		
-no cause of	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no complaints of	AMBIVALENT_EXISTENCE		bidirectional				
-no convincing	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no definite	DEFINITE_NEGATED_EXISTENCE	no[\s]*definite	bidirectional				
-no definite change	HISTORICAL		bidirectional	need regular expression			
-no evidence of	DEFINITE_NEGATED_EXISTENCE	(no|without)\s((definite|other|definitive|secondary|indirect)\s)?((radiographic|sonographic|CT)\s)?evidence\s(of|for)	bidirectional	2/28/2013	added other probably consider simplifying re as XYZ		
-no findings of	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no findings to indicate	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-no increase	HISTORICAL		bidirectional	4/16/2013			
-no new	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-no obvious	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no other	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no sign of	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no significant	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-no significant change	HISTORICAL		bidirectional				
-no significant interval change	HISTORICAL		bidirectional				
-no signs	DEFINITE_NEGATED_EXISTENCE	no sign(s)?	bidirectional				
-no definite signs of	PROBABLE_NEGATED_EXISTENCE	(no|without) (definite|definitive|secondary|indirect) ((radiographic|sonographic|CT)\s)?signs\s(of|for)	bidirectional				
-no suggestion	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-no suspicious change	HISTORICAL		bidirectional	4/16/2013			
-no XYZ to suggest	DEFINITE_NEGATED_EXISTENCE	(\b(without|no)\b[\d\D\s]*to suggest)	bidirectional	2/14/2013			
-nor	PROBABLE_NEGATED_EXISTENCE	\bnor\b	bidirectional				
-not appreciate	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-not associated with	PROBABLE_NEGATED_EXISTENCE		bidirectional				
-not cause	PSEUDONEG		bidirectional				
-not certain whether	PSEUDONEG		bidirectional				
-not clearly evident	PROBABLE_NEGATED_EXISTENCE		bidirectional	3/22/2013			
+имитирующий	PROBABLE_NEGATED_EXISTENCE	\b(имитирующ|подражающ|притворяющ|копирующ)[а-я]+	bidirectional	3/22/2013			
+отрицательная проверка на	DEFINITE_NEGATED_EXISTENCE	\bотрицательн[а-я]* (результат )?(оценк|оцениван|анализ|определени|проверк|обследован|экспертиз|тест|осмотр|исследован|освидетельствован)[а-я]* (для|на( предмет)?)	bidirectional				
+отрицательный на	DEFINITE_NEGATED_EXISTENCE	\bотрицател[а-я]* (для|на)	bidirectional				
+никогда не развился	PROBABLE_NEGATED_EXISTENCE	\bникогда не (развил|проявил)[а-я]*	bidirectional				
+никогда не	DEFINITE_NEGATED_EXISTENCE	\b(никогда не|ни разу)	bidirectional				
+нет	DEFINITE_NEGATED_EXISTENCE	\b(нет|не|без)\b	bidirectional				
+никакой	DEFINITE_NEGATED_EXISTENCE	\bникак[а-я]+	bidirectional				
+нет аномальных	DEFINITE_NEGATED_EXISTENCE	\b(нет|без) (аномальн|анормальн|необычн|ненормальн|патологическ|отклоняющих[а-я]+ от нормы|нарушен)[а-я]*	bidirectional	2/28/2013	changed from probable to definite		
+нет причин полагать	PROBABLE_NEGATED_EXISTENCE	\b((нет( никаких)?|без|отсутствие) (причин|оснований) полагать|причин[а-я]* (отсутств[а-я]+|нет))	bidirectional				
+отсутствие жалоб	AMBIVALENT_EXISTENCE	\b((нет( никаких)?|без|отсутствие) жалоб( на)?|жалобы[\d\D\s]*отсутствуют|жалоб[\d\D\s]*не поступало)	bidirectional				
+нет убедительных	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (убедительн|веск)[а-я]+	bidirectional				
+нет определенных	DEFINITE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (определ(е|ё)нн|точн|окончательн|четк|конкретн|несомненн)[а-я]+	bidirectional			
+нет определенных изменений	HISTORICAL	\b(нет( никаких)?|без) (определ(е|ё)нн|точн|окончательн|четк|конкретн|несомненн)[а-я]+ (изменен|перемен)[а-я]*	bidirectional	need regular expression			
+нет признаков	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (доказательств|признаков|подтверждений|свидетельств|следов|указани)( о)?	bidirectional	2/28/2013	added other probably consider simplifying re as XYZ		
+нет данных	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (доказательств|заключений|выводов|результатов|итогов|данных|сведений)( о)?	bidirectional				
+нет данных указывающих	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (доказательств|заключений|выводов|результатов|итогов|данных|сведений)(,)? (показывающ|указывающ|свидетельствующ)[а-я]*( о| на)?	bidirectional				
+нет увеличения	HISTORICAL	\b((нет( никакого)?|без) (увеличения|роста|возрастания|повышения)|не (увеличил|повысил)[а-я]*)	bidirectional	4/16/2013			
+нет новых	DEFINITE_NEGATED_EXISTENCE	\b(нет( никак[а-я]+)?|без) нов[а-я]+	bidirectional				
+нет очевидных	PROBABLE_NEGATED_EXISTENCE	\b(нет( никак[а-я]+)?|без) (очевидн|явн|заметн|выраженн)[а-я]+	bidirectional				
+нет других	PROBABLE_NEGATED_EXISTENCE	\b(нет( никак[а-я]+)?|без) (друг(и|о)|ин(ы|о)|дополнительн(ы|о)|проч(и|е))[а-я]+	bidirectional				
+нет значительных	PROBABLE_NEGATED_EXISTENCE	\b(нет( никак[а-я]+)?|без) (существенн|значим|значительн|важн|показательн|заметн|особ|серь(е|ё)зн|крупн|больш)[а-я]+	bidirectional				
+нет значительных изменений	HISTORICAL	\b(нет( никак[а-я]+)?|без) (существенн|значим|значительн|важн|показательн|заметн|особ|серь(е|ё)зн|крупн|больш)[а-я]+ (изменен|перемен)[а-я]*	bidirectional				
+нет значительных изменений в интервалах	HISTORICAL	\b(нет( никак[а-я]+)?|без) (существенн|значим|значительн|важн|показательн|заметн|особ|серь(е|ё)зн|крупн|больш)[а-я]+ (изменен|перемен)[а-я]* (в )?(интервал|промежутк|пауз|перерыв|период|отрезк|продолжительност)[а-я]*	bidirectional				
+нет определенных признаков	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (определ(е|ё)нн|точн|окончательн|четк|конкретн|несомненн)[а-я]+ (признак|след)[а-я]*	bidirectional				
+нет подозрительных изменений	HISTORICAL	\b(нет( никаких)?|без) подозрительн[а-я]+ (изменени|перемен)[а-я]*	bidirectional	4/16/2013			
+нет XYZ чтобы предполагать	DEFINITE_NEGATED_EXISTENCE	\b(нет( никаких)?|без)[\d\D\s]*(чтобы (предполагать|говорить о|подозревать|полагать|утверждать)|что указывал[а-я]* бы)	bidirectional	2/14/2013			
+ни	PROBABLE_NEGATED_EXISTENCE	\b(ни|и не|тоже не|также не)\b	bidirectional				
+не оценивать	PROBABLE_NEGATED_EXISTENCE	\b(никак )?не (оценив[а-я]+|приним[а-я]+ во внимание)	bidirectional				
+не связано с	PROBABLE_NEGATED_EXISTENCE	\b(никак )?не (связан|ассоцииру[а-я]+ с|соотнос[а-я]+ с|обусловлен|вызван)[а-я]*	bidirectional				
+не вызывает	PSEUDONEG	\bне (выз(ыв|ва)|(явля|(по)?служ|стал|был)[а-я]* причиной|прив(од|(е|ё)л)[а-я]* к|поро(ж)?д|застав(и)?л|(по)?вле(ч|к)[а-я]* за собой)[а-я]*	bidirectional				
+не уверен в	PSEUDONEG	\b(не(т)? уверен[а-я]* в|неясно|не( )?определен(н)?о|под сомнением)	bidirectional				
+не вполне очевидно	PROBABLE_NEGATED_EXISTENCE	\bне( )?(вполне |полностью |целиком |абсолютно )?(очевид|замет|яв(е)?н|яс(е)?н|чет(о)?к|несомнен|точ(е)?н|однознач(е)?н|понят(е)?н|очевид(е)?н|проявля|наблюда|прослежива|присутств|вид(е)?н)[а-я]*	bidirectional	3/22/2013			
 not complain of	PROBABLE_NEGATED_EXISTENCE		bidirectional				
 not demonstrate	DEFINITE_NEGATED_EXISTENCE		bidirectional				
 not drain	PSEUDONEG		bidirectional				
