@@ -129,7 +129,7 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 нет причин полагать	PROBABLE_NEGATED_EXISTENCE	\b((нет( никаких)?|без|отсутствие) (причин|оснований) полагать|причин[а-я]* (отсутств[а-я]+|нет))	bidirectional				
 отсутствие жалоб	AMBIVALENT_EXISTENCE	\b((нет( никаких)?|без|отсутствие) жалоб( на)?|жалобы[\d\D\s]*отсутствуют|жалоб[\d\D\s]*не поступало)	bidirectional				
 нет убедительных	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (убедительн|веск)[а-я]+	bidirectional				
-нет определенных	DEFINITE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (определ(е|ё)нн|точн|окончательн|четк|конкретн|несомненн)[а-я]+	bidirectional			
+нет определенных	DEFINITE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (определ(е|ё)нн|точн|окончательн|четк|конкретн|несомненн)[а-я]+	bidirectional				
 нет определенных изменений	HISTORICAL	\b(нет( никаких)?|без) (определ(е|ё)нн|точн|окончательн|четк|конкретн|несомненн)[а-я]+ (изменен|перемен)[а-я]*	bidirectional	need regular expression			
 нет признаков	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (доказательств|признаков|подтверждений|свидетельств|следов|указани)( о)?	bidirectional	2/28/2013	added other probably consider simplifying re as XYZ		
 нет данных	PROBABLE_NEGATED_EXISTENCE	\b(нет( никаких)?|без) (доказательств|заключений|выводов|результатов|итогов|данных|сведений)( о)?	bidirectional				
