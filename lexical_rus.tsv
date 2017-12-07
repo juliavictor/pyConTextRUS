@@ -103,7 +103,7 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 документированный	HISTORICAL	\b((за)?документирован|зарегистирован|документально подтвержден)[а-я]*	bidirectional				
 проверить	INDICATION	\b(провер(и|я)|определ(и|я)|рассмотр(е|я)|оцен(и|я)|пров(е|о)[а-я]+ оценку|проанализир(о|у))[а-я]*( на( предмет)?)?	bidirectional				
 доказательство	DEFINITE_EXISTENCE	\b(доказательств|свидетельств|подтверждени)[а-я]*	bidirectional				
-признак	PROBABLE_EXISTENCE	\b(признак|симптом|выраженность|проявлени)[а-я]*	bidirectional				
+признак	PROBABLE_EXISTENCE	\b(признак|симптом|выраженность|проявлени|особеност|показан|услов|критер|признак|измерен)[а-я]*	bidirectional				
 у нее исключили	DEFINITE_NEGATED_EXISTENCE	\bу нее исключ[а-я]*	bidirectional				
 не выявляется	DEFINITE_NEGATED_EXISTENCE	\bне выявл(я|е)[а-я]*	bidirectional				
 отсутствует	DEFINITE_NEGATED_EXISTENCE	\b(без| отсутств|свобод|не содерж)[а-я]*	bidirectional				
@@ -168,191 +168,98 @@ Lex	Type	Regex	Direction	Unnamed: 4	Unnamed: 5	Unnamed: 6	Codes
 пациент не был	DEFINITE_NEGATED_EXISTENCE	\b(пациент|больн)[а-я]* не был[а-я]*	bidirectional				
 положительная проверка на	DEFINITE_EXISTENCE	\b(положительн|утвердительн)[а-я]* (результат )?(оценк|оцениван|анализ|определени|диагностик|проверк|обследован|экспертиз|тест|осмотр|исследован|освидетельствован)[а-я]* (для|на( предмет)?)	bidirectional				
 подвергать	FUTURE	\b(предраспол(аг|ож)|подвер(г|ж)|предрасположенность|подверженность)[а-я]*( к)?	bidirectional	2/14/2013			
-progression of	HISTORICAL	progression\s(of|in)	bidirectional				
-rather than	PROBABLE_EXISTENCE		bidirectional				
-redemonstration	HISTORICAL	(re-demonstrat[a-z]*|redemonstrat[a-z]*)	forward				
-remote	HISTORICAL		forward	2/28/2013	added for Ami's 19649		
-represents	DEFINITE_EXISTENCE		forward				
-residual	HISTORICAL		forward				
-resolution of	HISTORICAL		forward				
-resolving	HISTORICAL		forward				
-rule her out	INDICATION		forward				
-rule him out	INDICATION		forward				
-rule him out for	INDICATION		forward				
-rule out	INDICATION	(r/o|rule out|\br o\b|r\.o\.|\bro\b)	forward				
-rule out for	INDICATION		forward				
-rule patient out for	INDICATION	rule (him|her|patient|the patient|subject) out for	forward				
-rule the patient out	INDICATION		forward				
-rule the patient out for	INDICATION		forward				
-ruled her out against	DEFINITE_NEGATED_EXISTENCE	ruled\s(him|her|the subject|the patient|subject|patient)\sout( against| for)?	forward	4/16/2013			
-ruled out against	DEFINITE_NEGATED_EXISTENCE		forward				
-ruled out for	DEFINITE_NEGATED_EXISTENCE		forward				
-rules her out	DEFINITE_NEGATED_EXISTENCE		forward				
-rules her out for	DEFINITE_NEGATED_EXISTENCE	rules\s(him|her)\sout\sfor	forward				
-rules him out	DEFINITE_NEGATED_EXISTENCE	rules\s(him|her)\sout	forward				
-rules him out for	DEFINITE_NEGATED_EXISTENCE	rules\s(him|her)\sout\sfor	forward				
-rules out	DEFINITE_NEGATED_EXISTENCE		forward				
-rules out for	DEFINITE_NEGATED_EXISTENCE		forward				
-rules the patient out	DEFINITE_NEGATED_EXISTENCE		forward				
-rules the patient out for	DEFINITE_NEGATED_EXISTENCE		forward				
-sequelae of	HISTORICAL		forward				
-should be ruled out for	INDICATION		forward				
-simulating	PROBABLE_NEGATED_EXISTENCE		forward	3/22/2013			
-study for detection	INDICATION		forward				
-sufficient to rule out	DEFINITE_NEGATED_EXISTENCE	sufficient\sto\srule\s((her|him|the patient|the subject)\s)?out	forward				
-suspicious	PROBABLE_EXISTENCE		forward				
-suspicous	PROBABLE_EXISTENCE		forward				
-test for	AMBIVALENT_EXISTENCE		forward				
-to exclude	PROBABLE_NEGATED_EXISTENCE		forward				
-unable to adequately assess	AMBIVALENT_EXISTENCE		forward				
-unable to assess	AMBIVALENT_EXISTENCE		forward				
-unremarkable for	DEFINITE_NEGATED_EXISTENCE		forward				
-warned of	FUTURE		forward	3/22/2013			
-were warned	FUTURE		forward				
-what must be ruled out is	INDICATION		forward				
-will be ruled out for	INDICATION		forward				
-with no	DEFINITE_NEGATED_EXISTENCE		forward				
-without	DEFINITE_NEGATED_EXISTENCE		forward				
-without difficulty	PSEUDONEG		forward				
-without indication	PROBABLE_NEGATED_EXISTENCE		forward				
-without sign	DEFINITE_NEGATED_EXISTENCE	without sign(s)?	forward				
-worrisome	PROBABLE_EXISTENCE		forward				
-#NAME?	DEFINITE_NEGATED_EXISTENCE		forward				
-although	CONJ		terminate				
-apart from	CONJ		terminate				
-as a cause for	CONJ		terminate				
-as a cause of	CONJ		terminate				
-as a etiology for	CONJ		terminate				
-as a etiology of	CONJ		terminate				
-as a reason for	CONJ		terminate				
-as a reason of	CONJ		terminate				
-as a secondary cause for	CONJ		terminate				
-as a secondary cause of	CONJ		terminate				
-as a secondary etiology for	CONJ		terminate				
-as a secondary etiology of	CONJ		terminate				
-as a secondary origin for	CONJ		terminate				
-as a secondary origin of	CONJ		terminate				
-as a secondary reason for	CONJ		terminate				
-as a secondary reason of	CONJ		terminate				
-as a secondary source for	CONJ		terminate				
-as a secondary source of	CONJ		terminate				
-as a source for	CONJ		terminate				
-as a source of	CONJ		terminate				
-as an cause for	CONJ		terminate				
-as an cause of	CONJ		terminate				
-as an etiology for	CONJ		terminate				
-as an etiology of	CONJ		terminate				
-as an origin for	CONJ		terminate				
-as an origin of	CONJ		terminate				
-as an reason for	CONJ		terminate				
-as an reason of	CONJ		terminate				
-as an secondary cause for	CONJ		terminate				
-as an secondary cause of	CONJ		terminate				
-as an secondary etiology for	CONJ		terminate				
-as an secondary etiology of	CONJ		terminate				
-as an secondary origin for	CONJ		terminate				
-as an secondary origin of	CONJ		terminate				
-as an secondary reason for	CONJ		terminate				
-as an secondary reason of	CONJ		terminate				
-as an secondary source for	CONJ		terminate				
-as an secondary source of	CONJ		terminate				
-as an source for	CONJ		terminate				
-as an source of	CONJ		terminate				
-as the cause for	CONJ		terminate				
-as the cause of	CONJ		terminate				
-as the etiology for	CONJ		terminate				
-as the etiology of	CONJ		terminate				
-as the origin for	CONJ		terminate				
-as the origin of	CONJ		terminate				
-as the reason for	CONJ		terminate				
-as the reason of	CONJ		terminate				
-as the secondary cause for	CONJ		terminate				
-as the secondary cause of	CONJ		terminate				
-as the secondary etiology for	CONJ		terminate				
-as the secondary etiology of	CONJ		terminate				
-as the secondary origin for	CONJ		terminate				
-as the secondary origin of	CONJ		terminate				
-as the secondary reason for	CONJ		terminate				
-as the secondary reason of	CONJ		terminate				
-as the secondary source for	CONJ		terminate				
-as the secondary source of	CONJ		terminate				
-as the source for	CONJ		terminate				
-as the source of	CONJ		terminate				
-as there are 	CONJ		terminate	2/14/2013			
-aside from	CONJ		terminate				
-but	CONJ		terminate				
-cause for	CONJ		terminate				
-cause of	CONJ		terminate				
-causes for	CONJ		terminate				
-causes of	CONJ		terminate				
-etiology for	CONJ		terminate				
-etiology of	CONJ		terminate				
-except	CONJ		terminate				
-however	CONJ		terminate				
-involving	CONJ		terminate				
-nevertheless	CONJ		terminate				
-origin for	CONJ		terminate				
-origin of	CONJ		terminate				
-origins for	CONJ		terminate				
-origins of	CONJ		terminate				
-other possibilities of	CONJ		terminate				
-reason for	CONJ		terminate				
-reason of	CONJ		terminate				
-reasons for	CONJ		terminate				
-reasons of	CONJ		terminate				
-secondary to	CONJ		terminate				
-source for	CONJ		terminate				
-source of	CONJ		terminate				
-sources for	CONJ		terminate				
-sources of	CONJ		terminate				
-still	CONJ		terminate				
-though	CONJ		terminate				
-trigger event for	CONJ		terminate				
-which	CONJ		terminate				
-yet	CONJ		terminate				
-(no|nothing) convincing	DEFINITE_NEGATED_EXISTENCE		forward				
-(the patient|him|her) was not	DEFINITE_NEGATED_EXISTENCE		forward				
-as a suggestion	PROBABLE_EXISTENCE		bidirectional				
-associated with	PROBABLE_EXISTENCE		forward				
-believe	DEFINITE_EXISTENCE		bidirectional				
-borderline	AMBIVALENT_EXISTENCE		bidirectional				
-can rule out	DEFINITE_NEGATED_EXISTENCE		forward				
-can rule out against	DEFINITE_NEGATED_EXISTENCE		forward				
-can rule out for	DEFINITE_NEGATED_EXISTENCE		forward				
-can see	DEFINITE_EXISTENCE		forward				
-cannot rule out	AMBIVALENT_EXISTENCE	cannot rule (the patient |him |her )?out	forward				
-completely excluded	DEFINITE_NEGATED_EXISTENCE	(completely|entirely)? excluded	backward				
-construed as	PROBABLE_EXISTENCE		bidirectional				
-could be	PROBABLE_EXISTENCE		forward				
-could not be ruled	AMBIVALENT_EXISTENCE		bidirectional				
-could represent	PROBABLE_EXISTENCE		forward				
-equivocal	AMBIVALENT_EXISTENCE		bidirectional				
-every indication	PROBABLE_EXISTENCE		forward				
-excluded	DEFINITE_NEGATED_EXISTENCE		backward				
-exhibit	PROBABLE_EXISTENCE		bidirectional				
-gross evidence	DEFINITE_EXISTENCE		forward				
-high probability	DEFINITE_EXISTENCE		bidirectional				
-highly hesitant	AMBIVALENT_EXISTENCE		bidirectional				
-indication	AMBIVALENT_EXISTENCE		bidirectional				
-insufficient to rule (the patient|him|her) out for	AMBIVALENT_EXISTENCE		forward				
-is positive	DEFINITE_EXISTENCE		bidirectional				
-no other (CT|radiographic|sonographic|MR|etc) evidence	PROBABLE_NEGATED_EXISTENCE		forward				
-no secondary (CT|radiographic|sonographic|MR|etc) signs	PROBABLE_NEGATED_EXISTENCE		forward				
-no suspicious	PROBABLE_NEGATED_EXISTENCE		forward				
-not adequate to rule out	AMBIVALENT_EXISTENCE	not adequate to rule ((the patient|him|her)\s)?out	forward				
-not likely	DEFINITE_NEGATED_EXISTENCE		bidirectional				
-not only	PSEUDONEG		forward				
-reveals	DEFINITE_EXISTENCE		forward				
-seen best	PROBABLE_EXISTENCE		backward				
-signs of	PROBABLE_EXISTENCE		bidirectional				
-was not excluded	AMBIVALENT_EXISTENCE	(was|were) not excluded	backward				
-if	HYPOTHETICAL		forward				
-decrease	HISTORICAL	decrease|decreased|decreasing|reduction|reduced	bidirectional				
-increase	HISTORICAL	increase|increasing|increased	bidirectional				
-possibly	PROBABLE_EXISTENCE		forward				
-decrease the likelihood	PROBABLE_NEGATED_EXISTENCE	decreas[a-z]+(\sthe)? likelihood	forward				
-suspect	PROBABLE_EXISTENCE		forward				
-likely represents	PROBABLE_EXISTENCE	likely (represents|representing)	forward				
-without change	HISTORICAL		backwards				
-risk factor	FUTURE	risk factor(s)?	bidirectional				
-favor	PROBABLE_EXISTENCE		bidirectional				
+ход	HISTORICAL	\b(протека|(про)?ход|продви|распростран|разви|прогрессир|прогредиентност)[а-я]*	bidirectional				
+больше чем	PROBABLE_EXISTENCE	\b(а не|вместо|нежели|(больше|нежели|скорее)[\d\D\s]*(чем|нежели)|не столько[\d\D\s]*сколько|в отличие от)	bidirectional
+повторное выявление	HISTORICAL	\bповторн[а-я]+[\d\D\s]*(выявл|распозна|подтвержд)[а-я]+	bidirectional				
+давний	HISTORICAL	\b(давн( )?(о)?(прош)?)[а-я]*	bidirectional		
+изображает	DEFINITE_EXISTENCE	\b(изобра(ж|з)|разъясн|олицетвор|символизир|означ|объясн|подтвержд|репрезентир|(ис|вы)полн[а-я]+ роль|представл[а-я]+ собой)[а-я]*	bidirectional				
+остаток	HISTORICAL	\b(остат(очн)?[а-я]+ (явлен)?[а-я]*)	bidirectional				
+разрешение	HISTORICAL	\b(расс(а|о)с|разлож|расщеп|нормализ|устран|разреш|заключ|прекра)[а-я]*	bidirectional				
+в стадии разрешения	HISTORICAL	\bв стадии разрешения	bidirectional
+у пациента исключен	DEFINITE_NEGATED_EXISTENCE	\b(у )?(нее|него|пациент|больн)? исключ[а-я]*	bidirectional					
+последствие	HISTORICAL	\b(последств|осложнен|остаточн[а-я]* явлен)[а-я]*	bidirectional				
+следует исключить	INDICATION	\bследует исключить	bidirectional					
+симуляция	DEFINITE_NEGATED_EXISTENCE	\bсимул[а-я]*	bidirectional			
+исследование по обнаружению	INDICATION	\bисследован[а-я]*( по)? обнаруж[а-я]*	bidirectional				
+достаточно, чтобы исключить	DEFINITE_NEGATED_EXISTENCE	\bдостаточ[а-я]*(,)? (что( бы)?|для)[\d\D\s]*исключ[а-я]*	bidirectional				
+сомнительный	PROBABLE_EXISTENCE	\b(вызыва[а-я]*)? (сомн(ен|и)|подозрен)[а-я]*	bidirectional				
+подозриетльный характер	PROBABLE_EXISTENCE	\b(подозрит|сомнит)[а-я]* (характер)?	bidirectional				
+исследовать	AMBIVALENT_EXISTENCE	\b(исследов|провер|испыт|проб)[а-я]* (на)?	bidirectional				
+не учитывать	PROBABLE_NEGATED_EXISTENCE	\b(отстран|исключ|не уч(и)?т|не включ|отсе)[а-я]*	bidirectional				
+не в состоянии адекватно оценить	AMBIVALENT_EXISTENCE	\b(не в состоянии|нельзя|невозможно) (адекватно|надлежащим образом|провести надлежащ[а-я]*) оцен[а-я]*	bidirectional				
+не примечательный	DEFINITE_NEGATED_EXISTENCE	\bне( )?(примечательн|чрезвычайн|отмеч|важн|отлич|значит)[а-я]*( по)?	bidirectional				
+предупредили о	FUTURE	\b(предупред|предостер)[а-я]*( о|об|обо)?	bidirectional			
+предупрежден о	FUTURE	\b(предупрежд|предостер)[а-я]*( о|об|обо)?	bidirectional				
+должно быть исключено	INDICATION	\b(долж(н|ен)[а-я]* бы[а-я]*|следует) исключ[а-я]*	bidirectional				
+будет исключено	INDICATION	\bбудет исключ[а-я]*	bidirectional				
+без	DEFINITE_NEGATED_EXISTENCE	\b(без(о)?|в отсутствие|у котор[а-я]* нет|при отсутствии|не име[а-я]*|не облад[а-я]*|без присутствия)	bidirectional				
+не сопровождающийся	DEFINITE_NEGATED_EXISTENCE	\b(не сопровожд[а-я]*|без(о)?|при отсутствии)	bidirectional				
+нетрудно	PSEUDONEG	\b(не( )?трудно|без труда|легко|не( )?сложно|без проблем|не испытывая[\d\D\s]*(затруднений|сложностей|тружностей))	bidirectional				
+без указания	PROBABLE_NEGATED_EXISTENCE	\b(без|не|нет|никаких)( )?(указан|уточн|обознач|признак|яс(ен|н))[а-я]*	bidirectional				
+не наблюдается признаков	DEFINITE_NEGATED_EXISTENCE	\b(не|нет|никаких|без)( )?(наблюда|име)[а-я]* признак[а-я]*	bidirectional				
+тревожный	PROBABLE_EXISTENCE	\bтревожн[а-я]*	bidirectional				
+хотя	CONJ	\b(хот(я|ь)|если бы даже|не( )?смотря на( то, что)?|но|однако|тем не менее)	bidirectional				
+кроме	CONJ	\b(если не|кроме( как)?|помимо|за исключением|не считая|не говоря (уже)? о|в остальном|не( )?зависимо( от)?|исключая|если не( считать)?)	bidirectional				
+в качестве причины	CONJ	\b((в качеств|как|счит)[а-я]*)?( одн[а-я]* из)? (повод|источн|основ|причин|этиолог|аргумент|обоснован)[а-я]*	bidirectional				
+считается основной причиной	CONJ	\b((в качеств|как|счит)[а-я]* )?(основн|главн)[а-я]* (повод|источн|основ|причин|этиолог|аргумент|обоснован)[а-я]*	bidirectional				
+считается побочной причиной	CONJ	\b((в качеств|как|счит)[а-я]* )?(вторичн|побочн)[а-я]* (повод|источн|основ|причин|этиолог|аргумент|обоснован)[а-я]*	bidirectional							
+поскольку существует 	CONJ	\b(поскольку|так как) (существ[а-я]*|есть)	bidirectional			
+за исключением	CONJ	\b(помимо|за исключением|если не (брать в расчет|принимать во внимание)|не говоря (о|об|обо)|оставляя в стороне)	bidirectional				
+но	CONJ	\b(но|однако|зато|а)	bidirectional				
+причина	CONJ	\b(повод|источн|основ|причин|этиолог|аргумент|обоснован)[а-я]*	bidirectional										
+все равно	CONJ	\b(все( равно|-таки)|не( )?важно|в то же время|не( )?смотря на|однако|при( )?этом|вместе с( тем)?|с другой стороны)	bidirectional				
+включая	CONJ	\b(c )?(включ|привлек|использов)[а-я]*	bidirectional				
+как бы то ни было	CONJ	\b(как бы (то|там) н(и|е) было|хот(я|ь)|не( )?смотря на|тем не менее|все( равно|-таки)|впрочем|при( всем)? этом|однако( же)?)	bidirectional				
+первоисточник	CONJ	\b(источн|первоисточн|первопричин)[а-я]*	bidirectional				
+другие возможности	CONJ	\b(друг|ин)[а-я]* (возможн|вариант)[а-я]*	bidirectional				
+второстепенное значение	CONJ	\b(второстепен|вторичн|побочн|эффект)[а-я]*( значен[а-я]*)? по (отнош[а-я]* к|сравнен[а-я]* с)	bidirectional								
+в любом случае	CONJ	\b(в любом случае|вместе с тем|до сих пор( ещ(е|ё))?)	bidirectional				
+несмотря на	CONJ	\b(в то время(,)? как|пусть( даже)?|хот(я|ь)( б(ы)?)?|не( )?смотря на|все ж(е)?|даже|если( б(ы)?)?|однако( ж(е)?)?|при этом)	bidirectional				
+побудительное событие	CONJ	\b(((побудительн|обусловливающ|триггер)[а-я]* событ[а-я]*)|спровоцирова[а-я]*)	bidirectional				
+который	CONJ	\b(котор[а-я]*|кто|т(от|а|о|е))	backward				
+пока	CONJ	\b(до сих пор|еще|уже|пока)	bidirectional				
+не убедительно	DEFINITE_NEGATED_EXISTENCE	\bне( )?убедительн[а-я]*	bidirectional				
+пациент не был	DEFINITE_NEGATED_EXISTENCE	\b(пациент[а-я]*|он|она|больн[а-я]*) не был(а)?	bidirectional				
+как предположение	PROBABLE_EXISTENCE	\b(как|в качестве) (предполож|рекомендац)[а-я]*	bidirectional				
+связанный с	PROBABLE_EXISTENCE	\bсвязан[а-я]* (с|со)	bidirectional				
+думать	DEFINITE_EXISTENCE	\b(дума|полага|утвержда|име[а-я]* убеждени)[а-я]*	bidirectional				
+граница	AMBIVALENT_EXISTENCE	\b(границ|гран|стык|спорн|не( )?однозначн)[а-я]*	bidirectional				
+можно исключить	DEFINITE_NEGATED_EXISTENCE	\bможно исключ[а-я]*	bidirectional			
+видно	PROBABLE_EXISTENCE	\b(можно )?((у)?вид|представ|п(р)?осмотр)[а-я]*	bidirectional				
+невозможно исключить	AMBIVALENT_EXISTENCE	\b(нельзя|невозможно) исключ[а-я]*	bidirectional				
+полностью исключено	DEFINITE_NEGATED_EXISTENCE	\b(полностью|совершенно|абсолютно) исключ[а-я]*	bidirectional				
+рассмотрено как	PROBABLE_EXISTENCE	\b(счит|истолкова|рассмотр|(о)?характеризов|расцен|трактов)[а-я]*( как)?	bidirectional				
+может быть	PROBABLE_EXISTENCE	\bможет (быть|являться)	bidirectional				
+было невозможно исключить	AMBIVALENT_EXISTENCE	\bбыло (невозможно|нельзя) исключ[а-я]*	bidirectional				
+может представлять собой	PROBABLE_EXISTENCE	\bмо(г|ж)[а-я]*( б(ы)?)? (стать|представлять собой|рассматриваться)	bidirectional				
+двусмысленный	AMBIVALENT_EXISTENCE	\b(двусмыслен|не( )?(яс(н|ен)|четк|однознач|определ)|сомнит|двойств|не( )?определ|(вызывающ[а-я]* )?подозр|присущ[а-я]* нескольким)[а-я]*	bidirectional				
+все указывает на	DEFINITE_EXISTENCE	\bвс(е|ё) (указыв|признак|основан)[а-я]*( полагать|на|того, что)?	bidirectional				
+исключено	DEFINITE_NEGATED_EXISTENCE	\bисключ[а-я]*	bidirectional				
+вводить	PROBABLE_EXISTENCE	\b(ввод|да(в|е|ё|ю)|примен|демонстр|обнаруж|прояв(л)?|облад|име|испытыв|провер|выявл)[а-я]*	bidirectional				
+макроскопическое исследование	DEFINITE_EXISTENCE	\bмакроскопическ[а-я]* исследовани[а-я]*	bidirectional				
+высокая уверенность	DEFINITE_EXISTENCE	\b(повышен|высок|больш)[а-я]* (уверен|вероятн)[а-я]*	bidirectional				
+повышенная неуверенность	PROBABLE_NEGATED_EXISTENCE	\b(повышен|высок|больш)[а-я]* (неуверен|сомнен)[а-я]*	bidirectional				
+недостаточно, чтобы исключить у	AMBIVALENT_EXISTENCE	\bне( )?достаточн[а-я]*(,)? чтоб(ы)? исключ[а-я]* у (нее|него|пациент[а-я]*|больн[а-я]*)	bidirectional				
+носит позитивный характер	DEFINITE_EXISTENCE	\b(носит позитивный характер|положительн[а-я]*|позитивн[а-я]*)	bidirectional				
+никаких других подтверждений	PROBABLE_NEGATED_EXISTENCE	\b(никак[а-я]*|нет) (друг|КТ|радиографич|рентгенологич|эхографич|МРТ)[а-я]* (подтвержден|доказательств)[а-я]*	bidirectional				
+никаких побочных эффектов	PROBABLE_NEGATED_EXISTENCE	\b(никаких|нет) (вторичн|побочн)[а-я]* (признак|симптом|выраженность|проявлени|эффект)[а-я]*	bidirectional				
+нет подозрения	PROBABLE_NEGATED_EXISTENCE	\b(никаких|нет) подозрен[а-я]*	bidirectional				
+недостаточно для исключения	AMBIVALENT_EXISTENCE	\bне( )?достаточно(,)? (для|чтобы) исключ[а-я]*	bidirectional				
+не только	PSEUDONEG	\b(не только|мало того( что)?)	bidirectional				
+показывает	DEFINITE_EXISTENCE	\b(показыв|раскрыв|проли[а-я]* свет|прояв|демонстр|обнаруж|указыв|свидетельств)([\d\D\s]*о|на)?	bidirectional				
+заметно лучше всего	PROBABLE_EXISTENCE	\bзамет[а-я]* лучше всего	bidirectional				
+намек на	PROBABLE_EXISTENCE	\b(намек[а-я]*[\d\D\s]*на|признак|след)[а-я]*	bidirectional				
+не исключалось	AMBIVALENT_EXISTENCE	\bне( был[а-я]*)? исключ[а-я]*	bidirectional				
+если	HYPOTHETICAL	\b(раз|при условии)	bidirectional				
+снижение	HISTORICAL	\b((о)?слаб(л|и)|уменьш)[а-я]*	bidirectional				
+спад	HISTORICAL	\b(спад|пониж|сниж|угас)[а-я]*	bidirectional				
+возрастать	HISTORICAL	\b((воз|вы|на)?р(а|о)ст|повыш|улучш|увелич|усил|прибав|разви|усугуб|аугументац)[а-я]*	bidirectional				
+возможно	PROBABLE_EXISTENCE	\b(может быть|как только возможно|по возможности|возможно|вероятно)	bidirectional				
+уменьшить вероятность	PROBABLE_NEGATED_EXISTENCE	\b(уменьш|(с|по)низ|скорат)[а-я]* вероятнст[а-я]*	bidirectional				
+человек с подозрением на заболевание	PROBABLE_EXISTENCE	\b(((больн|пациент)[а-я]* )?с подозрением на|подозре[а-я]*)	forward				
+вероятно, представляет собой	PROBABLE_EXISTENCE	\b(вероятно|судя по всему)(,)? (представ[а-я]* собой|состав|созд)[а-я]*	bidirectional				
+без изменений	HISTORICAL	\bбез (изменен|перемен)[а-я]*	bidirectionals				
+фактор риска	FUTURE	\bфактор[а-я]* риск[а-я]*	bidirectional				
+содействие	PROBABLE_EXISTENCE	\b(содейств|одобрен)[а-я]*	bidirectional			
+не в состоянии оценить	AMBIVALENT_EXISTENCE	\b((не (((в состоян|мог|мож|име[а-я]* возможн|уда|способ)[а-я]* (в полной мере|полностью|целиком)? (оцен|проверить достоверность|определ|провести оцен|(про)?анализир|дать оцен|устан|выясн)[а-я]*)|подда[а-я]* оцен[а-я]*|представляется возможным вынести рекомендаци[а-я]*))|(невозм[а-я]*)? оцен[а-я]* (невозм[а-я]*)?)	bidirectional				
+				

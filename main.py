@@ -54,4 +54,4 @@ def markup_sentence(s, modifiers, targets, prune_inactive=True):
 #    print(markup_sentence(x,modifiers, targets, prune_inactive=True))
 #    print("End --- \n")
 
-print(markup_sentence("Отрицательный результат теста на тромбоз", modifiers, targets, prune_inactive=True))
+print(markup_sentence("Пациент не был болен тромбозом", modifiers, targets, prune_inactive=True))
