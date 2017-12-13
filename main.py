@@ -3,6 +3,7 @@ import pyConTextNLP.itemData as itemData
 import networkx as nx
 import pyConTextNLP.helpers as helpers
 from os import path
+import re
 
 reports = [
     """IMPRESSION: Evaluation limited by lack of IV contrast; however, no evidence of
@@ -54,4 +55,13 @@ def markup_sentence(s, modifiers, targets, prune_inactive=True):
 #    print(markup_sentence(x,modifiers, targets, prune_inactive=True))
 #    print("End --- \n")
 
-print(markup_sentence("Пациент не был болен тромбозом", modifiers, targets, prune_inactive=True))
+# print(markup_sentence("Пациент не был болен тромбозом", modifiers, targets, prune_inactive=True))
+
+filename = script_dir+"/definite_existence/1.txt"
+with open(filename, encoding="utf8") as f:
+    text = f.read()
+
+sentences = re.split(r' *[\.\?!][\'"\)\]]* *', text)
+
+for i in range(len(sentences)):
+    print(markup_sentence(sentences[i], modifiers, targets, prune_inactive=True))
