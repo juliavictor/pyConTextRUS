@@ -5,6 +5,7 @@ import pyConTextNLP.helpers as helpers
 from os import path
 import re
 
+
 reports = [
     """IMPRESSION: Evaluation limited by lack of IV contrast; however, no evidence of
       bowel obstruction or mass identified within the abdomen or pelvis. Non-specific interstitial opacities and bronchiectasis seen at the right
@@ -22,7 +23,7 @@ reports = [
     """IMPRESSION: No definite pneumothorax""",
     """IMPRESSION:  New opacity at the left lower lobe consistent with pneumonia."""
 ]
-# относительный адрес!
+# relative path correction
 script_dir = path.dirname(__file__)
 print(script_dir)
 
@@ -55,8 +56,6 @@ def markup_sentence(s, modifiers, targets, prune_inactive=True):
 #    print(markup_sentence(x,modifiers, targets, prune_inactive=True))
 #    print("End --- \n")
 
-# print(markup_sentence("Пациент не был болен тромбозом", modifiers, targets, prune_inactive=True))
-
 filename = script_dir+"/definite_existence/1.txt"
 with open(filename, encoding="utf8") as f:
     text = f.read()
@@ -64,4 +63,6 @@ with open(filename, encoding="utf8") as f:
 sentences = re.split(r' *[\.\?!][\'"\)\]]* *', text)
 
 for i in range(len(sentences)):
-    print(markup_sentence(sentences[i], modifiers, targets, prune_inactive=True))
+    text = markup_sentence(sentences[i], modifiers, targets, prune_inactive=True)
+    if text.getMarkedTargets():
+        print(text)
