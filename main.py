@@ -28,10 +28,10 @@ script_dir = path.dirname(__file__)
 print(script_dir)
 
 modifiers = itemData.instantiateFromCSVtoitemData(
-    "file:///"+script_dir+"/lexical_rus_new.tsv")
+    "file:///"+script_dir+"/lexical_rus.tsv")
 
 targets = itemData.instantiateFromCSVtoitemData(
-    "file:///"+script_dir+"/utah_rus_new.tsv")
+    "file:///"+script_dir+"/utah_rus.tsv")
 
 # Example function to analyze each sentence
 def markup_sentence(s, modifiers, targets, prune_inactive=True):
@@ -56,7 +56,7 @@ def markup_sentence(s, modifiers, targets, prune_inactive=True):
 #    print(markup_sentence(x,modifiers, targets, prune_inactive=True))
 #    print("End --- \n")
 
-filename = script_dir+"/probable_negated_existence/1.txt"
+filename = script_dir+"/definite_existence/20.txt"
 with open(filename, encoding="utf8") as f:
     text = f.read()
 
